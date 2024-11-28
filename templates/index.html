@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камінь-Ножиці-Папір</title>
+</head>
+<body>
+    <h1>Гра "Камінь-Ножиці-Папір"</h1>
+
+    <form method="post">
+        <label>Ваш хід:</label>
+        <select name="move">
+            <option value="Камінь">Камінь</option>
+            <option value="Ножиці">Ножиці</option>
+            <option value="Папір">Папір</option>
+        </select>
+        <button type="submit">Зробити хід</button>
+    </form>
+
+    {% if result %}
+        <h2>Результат:</h2>
+        <p>Ваш хід: {{ player_move }}</p>
+        <p>Хід комп'ютера: {{ computer_move }}</p>
+        <p><strong>{{ result }}</strong></p>
+    {% endif %}
+</body>
+</html>
